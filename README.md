@@ -54,7 +54,9 @@ The following **bonus** features are implemented:
 
 - User can load past tweets infinitely.
 
-<img src="http://g.recordit.co/Vpn1gna61H.gif"> width=250<br>
+
+<img src="http://g.recordit.co/Vpn1gna61H.gif" width=250><br>
+
 
 
 ### Notes

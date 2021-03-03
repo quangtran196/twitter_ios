@@ -1,7 +1,42 @@
 # Project 3 - *Twitter Client*
 
-**Twitter Client** is a basic twitter app to read your tweets.
+# Twitter - Part II
 
+This is a basic twitter app to view, compose, favorite, and retweet tweets.
+
+Time spent: **3** hours spent in total
+
+## User Stories
+
+The following **required** functionality is completed:
+
+- [x] User can compose a tweet. (4pts)
+- [x] User can favorite a tweet. (4pts)
+- [x] User can retweet a tweet. (2pts)
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+- Composing a tweet:
+
+<img src='http://g.recordit.co/SUSsr5h2Dx.gif' width='' alt='Video Walkthrough' />
+
+
+- Favoriting a tweet:
+
+<img src='http://g.recordit.co/mntFnlJNWT.gif' width='' alt='Video Walkthrough' />
+
+
+- Retweeting:
+
+<img src='http://g.recordit.co/TAmpl0YC5X.gif' width='' alt='Video Walkthrough' />
+
+
+
+# Twitter - Part I
+
+**Twitter Client** is a basic twitter app to read your tweets.
 Time spent: **4** hours spent in total
 
 ## User Stories

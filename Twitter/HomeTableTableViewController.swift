@@ -20,7 +20,7 @@ class HomeTableTableViewController: UITableViewController {
         let myUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json"
         let myParams = ["count":numberOfTweet]
         
-        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success: {(tweets: [NSDictionary]) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams as [String : Any], success: {(tweets: [NSDictionary]) in
             
             self.tweetArray.removeAll()
             for tweet in tweets{
@@ -32,13 +32,14 @@ class HomeTableTableViewController: UITableViewController {
             print("Could not retrieve tweets!")
         })
     }
-        
+    
+ 
     
     func loadMoreTweet() {
         let myUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json"
         numberOfTweet = numberOfTweet + 20
         let myParams = ["count" : numberOfTweet]
-        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success: {(tweets: [NSDictionary]) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams as [String : Any], success: {(tweets: [NSDictionary]) in
             
             self.tweetArray.removeAll()
             for tweet in tweets{
@@ -71,6 +72,7 @@ class HomeTableTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCellTableViewCell
         
         let user = tweetArray[indexPath.row]["user"] as! NSDictionary
+        
         cell.userNameLabel.text = user["name"] as? String
         cell.tweetContent.text = tweetArray[indexPath.row]["text"] as? String
         
@@ -80,6 +82,11 @@ class HomeTableTableViewController: UITableViewController {
         if let imageData = data{
             cell.profileImageView.image = UIImage(data: imageData)
         }
+        
+        cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetID = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
+
         return cell;
     }
     
@@ -89,7 +96,8 @@ class HomeTableTableViewController: UITableViewController {
         super.viewDidLoad()
         loadTweet()
         myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
-        tableView.refreshControl = myRefreshControl
+        self.tableView.refreshControl = myRefreshControl
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -97,6 +105,12 @@ class HomeTableTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweet()
+    }
+        
 
     // MARK: - Table view data source
 

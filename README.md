@@ -33,31 +33,29 @@ The following **bonus** features are implemented:
 
 - User can log out.
 
-<img src="http://g.recordit.co/LHbu1hCBW4.gif" width=250><br>
+<img src="http://g.recordit.co/oobWhhx7Qq.gif" width=250><br>
 
 
 - User stays logged in across restarts.
 
-<img src="http://g.recordit.co/ZfueD3VJuc.gif" width=250><br>
+<img src="http://g.recordit.co/yRrP9gRT3e.gif" width=250><br>
 
 
 - User can view tweets with the user profile picture, username, and tweet text. 
 
 
-<img src="http://g.recordit.co/Lc783jcsX8.gif" width=250><br>
+<img src="http://g.recordit.co/lm5jSTq6wJ.gif" width=250><br>
 
 
 - User can pull to refresh.
 
-<img src="http://g.recordit.co/q5QAGfdC2g.gif" width=250><br>
+<img src="http://g.recordit.co/9i7CakDrlm.gif" width=250><br>
 
 
 - User can load past tweets infinitely.
 
 
-<img src="http://g.recordit.co/Vpn1gna61H.gif" width=250><br>
+<img src="http://g.recordit.co/BFpi5lYIck.gif" width=250><br>
 
 
 
-### Notes
-I do not use twitter so I use a new account. I do not know if that affects my work because the app only show username of my account, no profile picture and no content.
